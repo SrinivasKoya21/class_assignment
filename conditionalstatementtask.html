@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                background-color: #f4f4f4;
+                margin: 50px;
+            }
+
+            h3 {
+                color: #333;
+            }
+
+            input {
+                width: 250px;
+                height: 45px;
+                font-size: 18px;
+                padding: 8px;
+                border: 2px solid #007BFF;
+                border-radius: 8px;
+                outline: none;
+                text-align: center;
+            }
+
+            input:focus {
+                border-color: #0056b3;
+            }
+
+            .container {
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                display: inline-block;
+            }
+
+            #grade {
+                font-size: 24px;
+                font-weight: bold;
+                color: #007BFF;
+                display: block;
+                margin-top: 10px;
+            }
+        </style>
+
+        <script> 
+            function calculate() {
+                let score = parseInt(document.getElementById("score").value);
+                let result = "";
+
+                if (score > 80 && score <= 100) {
+                    result = "A";
+                } else if (score > 60 && score <= 80) {
+                    result = "B";
+                } else if (score > 40 && score <= 59) {
+                    result = "C";
+                } else {
+                    result = "F";
+                }
+
+                document.getElementById("grade").innerHTML = result;
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+            <h3>Grade Calculator</h3>
+            <input type="number" placeholder="Enter score" id="score" oninput="calculate()" min="0" max="100">
+            <div>
+                Your grade is: <span id="grade"></span>
+            </div>
+        </div>
+    </body>
+</html>

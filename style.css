@@ -1,0 +1,12 @@
+
+button{
+    background-color: aqua;
+    padding: 20px;
+    width: 10%;
+    height: 10%;
+}
+input{
+    text-align: center;
+    font: 1em sans-serif;
+    color:antiquewhite;
+}
